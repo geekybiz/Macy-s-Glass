@@ -3,7 +3,7 @@ angular.module("macysApp", ["ui.router", "ui.materialize"])
 
     $stateProvider
 
-      .state('home', {
+    .state('home', {
       url: '/home',
       templateUrl: 'app/views/home/homeTmpl.html',
       controller: 'homeCtrl'
@@ -31,6 +31,12 @@ angular.module("macysApp", ["ui.router", "ui.materialize"])
       url: '/store',
       templateUrl: 'app/views/store/storeTmpl.html',
       controller: 'storeCtrl'
+    })
+
+    .state('cart', {
+      url: '/cart',
+      templateUrl: 'app/views/cart/cartTmpl.html',
+      controller: 'cartCtrl'
     })
 
     $urlRouterProvider.otherwise('/home')

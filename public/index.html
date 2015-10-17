@@ -4,6 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv='refresh' content="3">
   <title>Macy's Glass</title>
 
   <!-- CSS  -->
@@ -13,24 +14,37 @@
   <link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 </head>
 
+<!-- Navigation for desktop -->
+
 <body ng-app="macysApp">
   <nav class="white" role="navigation">
     <div class="nav-wrapper container">
       <a id="logo-container" href="#/" class="brand-logo">Macy's Glass</a>
       <ul class="right hide-on-med-and-down">
+        <li><a href="#/">Home</a></li>
         <li><a href="#/about">About</a></li>
         <li><a href="#/services">Services</a></li>
         <li><a href="#/contact">Contact</a></li>
         <li><a href="#/store">Store</a></li>
+        <li><a href="#/cart" <i class="material-icons">shopping_cart</i></a></li>
+        <div id="register" class="btn-large waves-effect waves-light blue accent-4">Register</div>
+        <div id="logIn" class="btn-large waves-effect waves-light blue accent-4">Log-In</div>
       </ul>
 
-      <ul id="nav-mobile" class="side-nav">
-        <li><a href="#/about">About</a></li>
-        <li><a href="#/services">Services</a></li>
-        <li><a href="#/contact">Contact</a></li>
-        <li><a href="#/store">Store</a></li>
-      </ul>
-      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+
+
+    <!-- Navigation for mobile screens -->
+    <ul id="nav-mobile" class="side-nav">
+      <li><a href="#/">Home</a></li>
+      <li><a href="#/about">About</a></li>
+      <li><a href="#/services">Services</a></li>
+      <li><a href="#/contact">Contact</a></li>
+      <li><a href="#/store">Store</a></li>
+      <li><a href="#/cart"><i class="material-icons">shopping_cart</i></a></li>
+      <li class="btn-large waves-effect waves-light blue accent-4">Log-In</li>
+      <li class="btn-large waves-effect waves-light blue accent-4">Register</li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
@@ -45,7 +59,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.8/angular-ui-router.min.js"></script>
   <script src="js/materialize.js"></script>
   <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
-  <!-- <script src="js/init.js"></script> -->
+  <script src="js/init.js"></script>
   <script src="app/app.js"></script>
   <script src="app/views/home/homeCtrl.js"></script>
   <script src="app/views/about/aboutCtrl.js"></script>
@@ -57,6 +71,8 @@
   <script src="app/views/contact/contactService.js"></script>
   <script src="app/views/services/servicesService.js"></script>
   <script src="app/views/store/storeService.js"></script>
+  <script src="app/views/cart/cartService.js"></script>
+  <script src="app/views/cart/cartCtrl.js"></script>
 </body>
 
 </html>

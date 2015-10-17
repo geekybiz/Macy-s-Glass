@@ -3,41 +3,51 @@ var Orders = require('../models/User.js');
 module.exports = {
 
   create: function(req, res) {
-    Product.create(req.body, function(err, result) {
+    Orders.create(req.body, function(err, result) {
       if (err) {
-        res.send(err);
+        res.status(500)(err);
       } else {
-        res.json(result);
+        res.status(200).json(result);
       }
     });
   },
 
   read: function(req, res) {
-    Product.find(req.body, function(err, result) {
+    Orders.find(req.body, function(err, result) {
       if (err) {
-        res.send(err);
+        res.status(500)(err);
       } else {
-        res.json(result);
+        res.status(200).json(result);
+      }
+    });
+  },
+
+  readOne: function(req, res){
+    Orders.findById(req.params.id, function(err, result){
+      if (err) {
+        res.status(500)(err);
+      } else {
+        res.status(200).json(result);
       }
     });
   },
 
   update: function(req, res) {
-    Product.findByIdAndUpdate(req.params.id, function(err, results) {
+    Orders.findByIdAndUpdate(req.params.id, function(err, results) {
       if (err) {
-        res.send(err);
+        res.status(500)(err);
       } else {
-        res.json(result);
+        res.status(200).json(result);
       }
     });
   },
 
   delete: function(req, res) {
-    Product.findByIdAndRemove(function(err, result) {
+    Orders.findByIdAndRemove(function(err, result) {
       if (err) {
-        res.send(err);
+        res.status(500)(err);
       } else {
-        res.json(result);
+        res.status(200).json(result);
       }
     });
   }
