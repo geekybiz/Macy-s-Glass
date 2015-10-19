@@ -89,3 +89,7 @@ p {
   width:60px;
   height:60px;
 }*/
+
+.ng-invalid {
+  color: red;
+}

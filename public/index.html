@@ -4,7 +4,7 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no" />
-  <meta http-equiv='refresh' content="3">
+  <!-- <meta http-equiv='refresh' content="3"> -->
   <title>Macy's Glass</title>
 
   <!-- CSS  -->
@@ -26,25 +26,25 @@
         <li><a href="#/services">Services</a></li>
         <li><a href="#/contact">Contact</a></li>
         <li><a href="#/store">Store</a></li>
-        <li><a href="#/cart" <i class="material-icons">shopping_cart</i></a></li>
+        <li><a href="#/checkout" <i class="material-icons">shopping_cart</i></a></li>
         <div id="register" class="btn-large waves-effect waves-light blue accent-4">Register</div>
         <div id="logIn" class="btn-large waves-effect waves-light blue accent-4">Log-In</div>
       </ul>
 
 
 
-    <!-- Navigation for mobile screens -->
-    <ul id="nav-mobile" class="side-nav">
-      <li><a href="#/">Home</a></li>
-      <li><a href="#/about">About</a></li>
-      <li><a href="#/services">Services</a></li>
-      <li><a href="#/contact">Contact</a></li>
-      <li><a href="#/store">Store</a></li>
-      <li><a href="#/cart"><i class="material-icons">shopping_cart</i></a></li>
-      <li class="btn-large waves-effect waves-light blue accent-4">Log-In</li>
-      <li class="btn-large waves-effect waves-light blue accent-4">Register</li>
-    </ul>
-    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <!-- Navigation for mobile screens -->
+      <ul id="nav-mobile" class="side-nav">
+        <li><a href="#/">Home</a></li>
+        <li><a href="#/about">About</a></li>
+        <li><a href="#/services">Services</a></li>
+        <li><a href="#/contact">Contact</a></li>
+        <li><a href="#/store">Store</a></li>
+        <li><a href="#/checkout"><i class="material-icons">shopping_cart</i></a></li>
+        <li class="btn-large waves-effect waves-light blue accent-4">Log-In</li>
+        <li class="btn-large waves-effect waves-light blue accent-4">Register</li>
+      </ul>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
     </div>
   </nav>
 
@@ -60,6 +60,8 @@
   <script src="js/materialize.js"></script>
   <script src="bower_components/angular-materialize/src/angular-materialize.js"></script>
   <script src="js/init.js"></script>
+  <script src="https://js.stripe.com/v2/"></script>
+  <script src="bower_components/angular-payments/lib/angular-payments.js"></script>
   <script src="app/app.js"></script>
   <script src="app/views/home/homeCtrl.js"></script>
   <script src="app/views/about/aboutCtrl.js"></script>
@@ -73,6 +75,8 @@
   <script src="app/views/store/storeService.js"></script>
   <script src="app/views/cart/cartService.js"></script>
   <script src="app/views/cart/cartCtrl.js"></script>
+  <script src="app/views/checkout/checkoutCtrl.js"></script>
+  <script src="app/views/checkout/checkoutService.js"></script>
 </body>
 
 </html>

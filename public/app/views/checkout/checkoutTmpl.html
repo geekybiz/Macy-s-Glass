@@ -1,0 +1,70 @@
+<!-- Input fields for first and last names (both fields are using the same row) -->
+<div class="row">
+  <form stripe-form="stripeCallback" class="col s12">
+    <div class="input-field col s4">
+      <input ng-model="first_name" placeholder="" type="text" class="validate" />
+      <label for="first_name">First Name</label>
+    </div>
+    <div class="input-field col s5">
+      <input ng-model="last_name" placeholder="" type="text" class="validate" />
+      <label for="last_name">Last Name</label>
+    </div>
+</div>
+
+<!-- Input fields for address (both fields are using the same row) -->
+<div class=row>
+  <div class="input-field col s9">
+    <input ng-model="address_line1" placeholder="" type="text" class="validate" />
+    <label for="address_line1">Address Line 1</label>
+  </div>
+</div>
+<div class="row">
+  <div class="input-field col s9">
+    <input ng-model="address_line2" placeholder="" type="text" class="validate" />
+    <label for="address_line2">Address Line 2</label>
+  </div>
+</div>
+
+<!-- Input field for city (all fields are using the same row)-->
+<div class="row">
+  <div class="input-field col s3">
+    <input ng-model="address_city" placeholder="" type="text" class="validate" />
+    <label for="address_city">City</label>
+  </div>
+
+  <!-- Input field for state -->
+  <div class="input-field col s2">
+    <input ng-model="address_state" placeholder="" type="text" class="validate" />
+    <label for="address_state">State</label>
+  </div>
+
+  <!-- Input field for zip -->
+  <div class="input-field col s2">
+    <input ng-model="address_zip" placeholder="" type="text" class="validate" />
+    <label for="address_zip">Zip</label>
+  </div>
+
+  <!-- Input field for country -->
+  <div class="input-field col s2">
+    <input ng-model="address_country" placeholder="" type="text" class="validate" />
+    <label for="address_country">Country</label>
+  </div>
+</div>
+
+<!-- Credit card entry fields -->
+<input ng-model="number" placeholder="Card Number" payments-format="card" payments-validate="card" name="card" />
+<input ng-model="expiry" placeholder="Expiration" payments-format="expiry" payments-validate="expiry" name="expiry" />
+<input ng-model="cvc" placeholder="CVC" payments-format="cvc" payments-validate="cvc" name="cvc" />
+<button type="submit">Submit</button>
+</form>
+
+
+<div ng-if="form.card.$invalid">
+  Error: Invalid card number!
+</div>
+<div ng-if="form.expiry.$invalid">
+  Error: Invalid expiration date!
+</div>
+<div ng-if="form.cvc.$invalid">
+  Error: Invalid CVC!
+</div>
