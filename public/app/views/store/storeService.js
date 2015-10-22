@@ -1,10 +1,26 @@
 angular.module('macysApp')
   .service('storeService', function($http) {
 
+    //ADD DELETE PRODUCTS
+
     this.getAllProductData = function() {
       return $http({
         method: 'GET',
         url: '/api/products'
+      });
+    };
+
+    this.getOneProduct = function() {
+      return $http({
+        method: 'GET',
+        url: '/api/products/' + id
+      });
+    };
+
+    this.deleteItem = function(id) {
+      return $http({
+        method: 'DELETE',
+        url: '/api/products/' + id
       });
     };
 

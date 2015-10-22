@@ -1,0 +1,16 @@
+<form class="newProduct" method="post">
+  Item Name
+  <br>
+  <input type="text" name="itemName" ng-model="product.title">
+  <br>
+  Item Description
+  <input type="text" name="itemDescription" ng-model="product.description">
+  <br>
+  Price
+  <input type="text" name="itemPrice" ng-model="product.price">
+  {{productList}}
+</form>
+
+<button class="btn waves-effect waves-light blue accent-4" ng-click="addToDatabase(product)" type="submit" name="action">Submit
+  <i class="material-icons right">send</i>
+</button>

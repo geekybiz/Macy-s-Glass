@@ -1,0 +1,9 @@
+#about-view {
+  height: 100%;
+  width: 100%;
+  background-image: url("../photos/chair-window-bw.jpg");
+}
+
+#about-view li {
+  background-color: brown;
+}

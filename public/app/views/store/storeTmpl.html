@@ -1,38 +1,17 @@
-<ul class="collection">
+<ul class="collection" ng-repeat="product in products">
 
     <li class="collection-item avatar">
       <img src="photos/glass-cleaner.jpg"  alt="" class="circle" width="100" height="100">
       <!-- <div class='sprayCan'><img src="photos/glass-cleaner.jpg" alt="">
     </div> -->
 
-      <span class="title">Sprayway Glass Cleaner</span>
-      <p>Excellent product recommended for the cleaning of any surface <br>
-         $3.00
+      <span class="title">{{product.title}}</span>
+      <p>{{product.description}}<br>
+         {{product.price | currency:"$"}}
       </p>
-      <a href="#/cart" class="secondary-content"><i class="btn-large waves-effect waves-light blue accent-4">Add To Cart</i></a>
+      <li>
+      <i class="btn-large waves-effect waves-light red accent-4"><input type='submit' class="secondary-content" ng-click="deleteFromStore(product._id, $index)" value='Delete Item'></i>
     </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle">folder</i>
-      <span class="title">Title</span>
-      <p>First Line<br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+    <li>
+      <i class="btn-large waves-effect waves-light blue accent-4"><input type='submit' class="secondary-content" ng-click="addToCart(product)" value='Add To Cart'></i>
     </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle green">insert_chart</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-    <li class="collection-item avatar">
-      <i class="material-icons circle red">play_arrow</i>
-      <span class="title">Title</span>
-      <p>First Line <br>
-         Second Line
-      </p>
-      <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-    </li>
-  </ul>

@@ -6,16 +6,24 @@
  * Made By MaterializeCSS.com
  */
 
+ html, body {
+   height: 100%;
+ }
+
 nav ul a {
-    color: #444;
+    color: #312F2F;
 }
 nav .brand-logo {
-  color: #444;
+  color: #312F2F;
   font-family: "Lobster";
 }
 
 nav .material-icons {
-    color: #444;
+    color: #312F2F;
+}
+
+i.medium {
+  color: #312F2F;
 }
 
 p {
@@ -63,6 +71,12 @@ p {
 footer.page-footer {
   margin: 0;
   background-color: #312F2F;
+  text-align: center;
+  color: white;
+}
+
+.row.col.l6 {
+  text-align: center;
 }
 
 p {
@@ -93,3 +107,38 @@ p {
 .ng-invalid {
   color: red;
 }
+
+
+#about-view {
+  height: 100%;
+  width: 100%;
+  background-image: url("../photos/chair-window-bw.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.text {
+  margin-left: 20px;
+}
+
+#about-view h1 {
+  padding: 20px;
+  color: #ececec;
+}
+
+#about-view p {
+  padding: 20px;
+  width: 50%;
+  color: #ececec;
+  font-size: 2em;
+  line-height: 2em;
+}
+
+#contact-view {
+  height: 100%;
+  width: 100%;
+  background-image: url("../photos/window-photo.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;

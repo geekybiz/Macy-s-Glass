@@ -4,6 +4,7 @@ var bodyParser = require('body-parser');
 var cors = require('cors');
 var mongoose = require('mongoose');
 var mongoURI = 'mongodb://localhost:27017/macysApp';
+var session = require('express-session');
 
 //Mongoose Connection
 mongoose.set('debug', true);
@@ -20,6 +21,9 @@ app
   .use(bodyParser.json())
   .use(cors())
   .use(express.static(__dirname + '/public'))
+  .use(session({secret: 'secret'}))
+
+
 
 
 //Controllers
@@ -29,29 +33,65 @@ var OrderController = require('./api/controllers/OrderController.js');
 var UserController = require('./api/controllers/UserController.js');
 
 //Endpoints -- Represents the View of the Backend --CRUD
-app.post('/products', ProductsController.create);
-app.get('/products', ProductsController.read);
-app.get('/products/:id', ProductsController.readOne);
-app.put('/products/:id', ProductsController.update);
-app.delete('/products/:id', ProductsController.delete);
+app.post('/api/products', ProductsController.create);
+app.get('/api/products', ProductsController.read);
+app.get('/api/products/:id', ProductsController.readOne);
+app.put('/api/products/:id', ProductsController.update);
+app.delete('/api/products/:id', ProductsController.delete);
 
-app.post('/users', UserController.create);
-app.get('/users', UserController.read);
-app.get('/users/:id', UserController.readOne);
-app.put('/users/:id', UserController.update);
-app.delete('/users/:id', UserController.delete);
+app.post('/api/users', UserController.create);
+app.get('/api/users', UserController.read);
+app.get('/api/users/:id', UserController.readOne);
+app.put('/api/users/:id', UserController.update);
+app.delete('/api/users/:id', UserController.delete);
 
-app.post('/orders', OrderController.create);
-app.get('/orders', OrderController.read);
-app.get('/orders/:id', OrderController.readOne);
-app.put('/orders/:id', OrderController.update);
-app.delete('/orders/:id', OrderController.delete);
+app.post('/api/orders', OrderController.create);
+app.get('/api/orders', OrderController.read);
+app.get('/api/orders/:id', OrderController.readOne);
+app.put('/api/orders/:id', OrderController.update);
+app.delete('/api/orders/:id', OrderController.delete);
 
-app.post('/cart', CartController.create);
-app.get('/cart', CartController.read);
-app.get('/cart/;id', CartController.readOne);
-app.put('/cart/:id', CartController.update);
-app.delete('/cart/:id', CartController.delete);
+//CART
+
+function cart(req, res, next) {
+  if (!req.session.cart) {
+    req.session.cart = []
+    next()
+  }
+  next()
+}
+
+app.post('/api/cart', cart, CartController.addProduct);
+
+// function(req, res) {
+//
+//   var product = {
+//     product: 'glass cleaner',
+//     quantity: 1,
+//     price: 3
+//   }
+
+app.get('/api/cart', cart, CartController.getCart);
+
+// function(req, res) {
+//   res.send(req.session.cart)
+// });
+// app.get('/cart', CartController.read);
+
+
+
+//
+//   req.session.cart.push(product);
+//   console.log(req.session.cart)
+//   res.end()
+// })
+
+app.put('/api/cart/remove', cart, CartController.deleteItem);
+app.put('/api/cart/updateItem', cart, CartController.updateItem);
+
+// function(req, res) {
+//   req.session.cart = [];
+// });
 
 
 

@@ -1,5 +1,10 @@
 angular.module("macysApp")
-.controller("checkoutCtrl", function($scope){
+.controller("checkoutCtrl", function($scope, cartService){
+
+
+
+
+
 
   $scope.stripeCallback = function(code, result){
     if (result.error) {
