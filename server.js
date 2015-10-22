@@ -86,7 +86,7 @@ app.get('/api/cart', cart, CartController.getCart);
 //   res.end()
 // })
 
-app.put('/api/cart/remove', cart, CartController.deleteItem);
+app.delete('/api/cart/remove/:id', cart, CartController.deleteItem);
 app.put('/api/cart/updateItem', cart, CartController.updateItem);
 
 // function(req, res) {

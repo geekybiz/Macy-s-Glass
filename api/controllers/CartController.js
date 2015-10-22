@@ -37,8 +37,9 @@ module.exports = {
   },
 
   deleteItem: function(req, res) {
+
     for (var i = 0; i < req.session.cart.length; i++) {
-      if (req.session.cart[i].item.id === req.body.id) {
+      if (req.session.cart[i].id === req.params.id) {
         req.session.cart.splice(i, 1);
         break;
       }

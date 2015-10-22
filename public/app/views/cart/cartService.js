@@ -27,11 +27,8 @@ angular.module('macysApp')
 
     this.removeItem = function(data) {
       return $http({
-        method: 'PUT',
-        url: '/api/cart/remove',
-        data: {
-          id: data
-        }
+        method: 'DELETE',
+        url: '/api/cart/remove/' + data
       })
     }
   });

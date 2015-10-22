@@ -5,7 +5,7 @@ angular.module("macysApp")
     $scope.products = getCart;
 
     $scope.removeItemFromCart = function(id, $index) {
-      cartService.removeItem(id).then(function(result){
+     cartService.removeItem(id).then(function(result){
         $scope.products.splice($index, 1);
       })
       }
