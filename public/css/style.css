@@ -97,6 +97,7 @@ p {
 .input-field input[type=text]:focus {
   border-bottom: 1px solid blue;
   box-shadow: 0 1px 0 0 blue;
+}
 
 /*.sprayCan{
   background: red;
@@ -118,7 +119,6 @@ p {
 }
 
 
-/*ABOUT VIEW*/
 
 #about-view {
   height: 100%;
