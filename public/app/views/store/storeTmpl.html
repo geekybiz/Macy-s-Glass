@@ -1,17 +1,21 @@
 <ul class="collection" ng-repeat="product in products">
 
-    <li class="collection-item avatar">
-      <img src="photos/glass-cleaner.jpg"  alt="" class="circle" width="100" height="100">
-      <!-- <div class='sprayCan'><img src="photos/glass-cleaner.jpg" alt="">
+  <li class="collection-item avatar">
+    <img src="photos/glass-cleaner.jpg" alt="" class="circle" width="100" height="100">
+    <!-- <div class='sprayCan'><img src="photos/glass-cleaner.jpg" alt="">
     </div> -->
 
-      <span class="title">{{product.title}}</span>
-      <p>{{product.description}}<br>
-         {{product.price | currency:"$"}}
-      </p>
-      <li>
-      <i class="btn-large waves-effect waves-light red accent-4"><input type='submit' class="secondary-content" ng-click="deleteFromStore(product._id, $index)" value='Delete Item'></i>
-    </li>
-    <li>
-      <i class="btn-large waves-effect waves-light blue accent-4"><input type='submit' class="secondary-content" ng-click="addToCart(product)" value='Add To Cart'></i>
-    </li>
+    <span class="title">{{product.title}}</span>
+    <p>{{product.description}}
+      <br> {{product.price | currency:"$"}}
+
+      <!-- <a class="btn-medium waves-effect waves-light green accent-4" class="secondary-content" ng-click="addToCart(product)">Add to Cart</a> -->
+
+
+
+      <!-- <a class="btn-medium waves-effect waves-light red accent-4" class="secondary-content" ng-click="deleteFromStore(product._id, $index)">Remove from Cart</a> -->
+    </p>
+
+    <a class="btn-floating btn-medium waves-effect waves-light green" ng-click="addToCart(product)" onclick="Materialize.toast('Added to Cart', 4000)"><i class="material-icons">add</i></a>
+
+    <a class="btn-floating btn-medium waves-effect waves-light red" ng-click="deleteFromStore(product._id, $index)"><i class="material-icons">remove</i></a>

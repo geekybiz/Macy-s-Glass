@@ -109,6 +109,8 @@ p {
 }
 
 
+/*ABOUT VIEW*/
+
 #about-view {
   height: 100%;
   width: 100%;
@@ -117,6 +119,7 @@ p {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 
 .text {
   margin-left: 20px;
@@ -142,3 +145,9 @@ p {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+
+#cart-view .btn-large {
+  float: right;
+}

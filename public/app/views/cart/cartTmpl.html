@@ -1,20 +1,26 @@
-<ul class="collection" ng-repeat="product in products">
+<div id="cart-view" class="route-container">
+  <ul class="collection" ng-repeat="product in products">
 
-  <li class="collection-item avatar">
-    <img src="photos/glass-cleaner.jpg" alt="" class="circle" width="100" height="100">
-    <!-- <div class='sprayCan'><img src="photos/glass-cleaner.jpg" alt="">
+    <li class="collection-item avatar">
+      <img src="photos/glass-cleaner.jpg" alt="" class="circle" width="100" height="100">
+
+      <!-- <div class='sprayCan'><img src="photos/glass-cleaner.jpg" alt="">
     </div> -->
 
-    <span class="title">{{product.title}}</span>
-    <p>{{product.description}}
-      <br> {{product.price | currency:"$"}}
-    </p>
-    <li>
+      <span class="title">{{product.title}}</span>
+      <p>{{product.description}}
+        <br> {{product.price | currency:"$"}}
+      </p>
+
+      <!-- CART BUTTONS -->
+      <a class="btn-floating btn-medium waves-effect waves-light red" ng-click="removeItemFromCart(product._id, $index)"><i class="material-icons">remove</i></a>
+
       <a href="#/checkout" <i class="btn-large waves-effect waves-light blue accent-4">Proceed to Checkout</i></a>
-    </li>
-    <li>
+
       <a href="#/store" <i class="btn-large waves-effect waves-light green accent-4">Continue Shopping</i></a>
-    </li>
-    <li>
+
+      <!-- SQUARE REMOVE FROM CART BUTTON -->
+      <!-- <li>
       <a class="btn-large waves-effect waves-light red accent-4" ng-click="removeItemFromCart(product._id, $index)">Remove Item</a>
-    </li>
+    </li> -->
+</div>

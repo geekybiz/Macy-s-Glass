@@ -12,7 +12,6 @@ module.exports = {
   },
 
   getCart: function(req, res) {
-    console.log('GETTING CART', req.session.cart)
     res.send(req.session.cart)
   },
 
