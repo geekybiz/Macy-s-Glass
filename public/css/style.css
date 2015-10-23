@@ -89,6 +89,15 @@ p {
   background-color: blue;
 }
 
+/* label focus color */
+.input-field input[type=text]:focus + label {
+  color: blue;
+}
+/* label underline focus color */
+.input-field input[type=text]:focus {
+  border-bottom: 1px solid blue;
+  box-shadow: 0 1px 0 0 blue;
+
 /*.sprayCan{
   background: red;
   width:60px;
