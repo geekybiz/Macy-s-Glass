@@ -8,6 +8,7 @@ angular.module("macysApp", ["ui.router", "ui.materialize", "angularPayments"])
 
   $stateProvider
 
+
     .state('home', {
     url: '/home',
     templateUrl: 'app/views/home/homeTmpl.html',
@@ -20,10 +21,16 @@ angular.module("macysApp", ["ui.router", "ui.materialize", "angularPayments"])
     controller: 'aboutCtrl'
   })
 
-  .state('services', {
-    url: '/services',
-    templateUrl: 'app/views/services/servicesTmpl.html',
-    controller: 'servicesCtrl'
+  .state('homeServices', {
+    url: '/homeservices',
+    templateUrl: 'app/views/homeServices/homeServicesTmpl.html',
+    controller: 'homeServicesCtrl'
+  })
+
+  .state('commServices', {
+    url: '/commservices',
+    templateUrl: 'app/views/commServices/commServicesTmpl.html',
+    controller: 'commServicesCtrl'
   })
 
   .state('contact', {
@@ -41,8 +48,8 @@ angular.module("macysApp", ["ui.router", "ui.materialize", "angularPayments"])
         return storeService.getAllProductData().then(function(resp){
           return resp.data;
         }, function(err){
-          console.log(err)
-        })
+          console.log(err);
+        });
       }
     }
   })
@@ -55,7 +62,7 @@ angular.module("macysApp", ["ui.router", "ui.materialize", "angularPayments"])
       getCart: function(cartService) {
         return cartService.getCart().then(function(resp) {
           return resp.data;
-        });        
+        });
       }
     }
   })
@@ -72,5 +79,5 @@ angular.module("macysApp", ["ui.router", "ui.materialize", "angularPayments"])
     controller: 'adminCtrl'
   })
 
-  $urlRouterProvider.otherwise('/home')
+  $urlRouterProvider.otherwise('/home');
 });

@@ -89,6 +89,21 @@ p {
   background-color: blue;
 }
 
+/*DROPDOWN BUTTON STYLING EDITS*/
+
+a.dropdown-button.btn {
+  text-transform: none;
+  color: #312F2F;
+  background-color: #fff;
+  box-shadow: none;
+}
+
+a.dropdown-button.btn .dropdown-content active {
+  color: #312F2F;
+  opacity: 0;
+}
+
+
 /* label focus color */
 .input-field input[type=text]:focus + label {
   color: blue;

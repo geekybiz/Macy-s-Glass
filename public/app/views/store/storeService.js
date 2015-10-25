@@ -1,7 +1,7 @@
 angular.module('macysApp')
   .service('storeService', function($http) {
 
-    //ADD DELETE PRODUCTS
+    //ADD/DELETE PRODUCTS
 
     this.getAllProductData = function() {
       return $http({
@@ -68,5 +68,6 @@ angular.module('macysApp')
         alert("Added to Cart");
       });
     };
+    
 
   });

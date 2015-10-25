@@ -4,9 +4,9 @@ angular.module("macysApp")
     //Display products on store page after upload ("getProducts is a function as a resolve on app.js routes")
   $scope.products = getProducts;
 
+
     //Add items to cart
     $scope.addToCart = function(product) {
-      console.log('ADDING')
       cartService.addToCart(product);
     };
 

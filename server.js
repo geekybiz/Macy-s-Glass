@@ -21,7 +21,7 @@ app
   .use(bodyParser.json())
   .use(cors())
   .use(express.static(__dirname + '/public'))
-  .use(session({secret: 'secret'}))
+  .use(session({secret: 'secret'}));
 
 
 
@@ -55,10 +55,10 @@ app.delete('/api/orders/:id', OrderController.delete);
 
 function cart(req, res, next) {
   if (!req.session.cart) {
-    req.session.cart = []
-    next()
+    req.session.cart = [];
+    next();
   }
-  next()
+  next();
 }
 
 app.post('/api/cart', cart, CartController.addProduct);

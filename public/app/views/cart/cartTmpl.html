@@ -10,6 +10,9 @@
       <span class="title">{{product.title}}</span>
       <p>{{product.description}}
         <br> {{product.price | currency:"$"}}
+      <br>    Quantity: {{products.length}}
+      <a class="btn-floating btn-small waves-effect waves-light green accent-4" ng-click="addToCart(product)"><i class="material-icons">add</i></a>
+       <a class="btn-floating btn-small waves-effect waves-light red" ng-click="removeItemFromCart(product._id, $index)"><i class="material-icons">remove</i></a>
       </p>
 
       <!-- CART BUTTONS -->

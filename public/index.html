@@ -23,10 +23,14 @@
       <ul class="right hide-on-med-and-down">
         <li><a href="#/">Home</a></li>
         <li><a href="#/about">About</a></li>
-        <li><a href="#/services">Services</a></li>
+        <li><a class="dropdown-button btn" data-hover="true" data-beloworigin="true" data-induration="true" data-outduration="true" href="#" data-activates="dropdown1">Services</a></li>
+        <ul id="dropdown1" class="dropdown-content">
+          <li><a class="black-text" href="#/homeservices">Home</a></li>
+          <li><a class="black-text" href="#/commservices">Commercial</a></li>
+        </ul>
         <li><a href="#/contact">Contact</a></li>
         <li><a href="#/store">Store</a></li>
-        <li><a href="#/cart" <i class="material-icons">shopping_cart</i></a></li>
+        <li ng-controller="navController"><a href="#/cart"><i class="material-icons">shopping_cart</i></a></li>
         <li><a href="#/checkout">Checkout</a></li>
         <li><a href="#/admin">Admin</a></li>
         <div id="register" class="btn-large waves-effect waves-light blue accent-4">Register</div>
@@ -39,7 +43,8 @@
       <ul id="nav-mobile" class="side-nav">
         <li><a href="#/">Home</a></li>
         <li><a href="#/about">About</a></li>
-        <li><a href="#/services">Services</a></li>
+        <li><a href="#/homeservices">Home Services</a></li>
+        <li><a href="#/commservices">Commercial Services</a></li>
         <li><a href="#/contact">Contact</a></li>
         <li><a href="#/store">Store</a></li>
         <li><a href="#/cart"><i class="material-icons">shopping_cart</i></a></li>
@@ -70,12 +75,10 @@
   <script src="app/views/home/homeCtrl.js"></script>
   <script src="app/views/about/aboutCtrl.js"></script>
   <script src="app/views/contact/contactCtrl.js"></script>
-  <script src="app/views/services/servicesCtrl.js"></script>
   <script src="app/views/store/storeCtrl.js"></script>
   <script src="app/views/home/homeService.js"></script>
   <script src="app/views/about/aboutService.js"></script>
   <script src="app/views/contact/contactService.js"></script>
-  <script src="app/views/services/servicesService.js"></script>
   <script src="app/views/store/storeService.js"></script>
   <script src="app/views/cart/cartService.js"></script>
   <script src="app/views/cart/cartCtrl.js"></script>
@@ -83,6 +86,12 @@
   <script src="app/views/checkout/checkoutService.js"></script>
   <script src="app/views/admin/adminCtrl.js"></script>
   <script src="app/views/admin/adminService.js"></script>
+  <script src="app/views/navbar/navbarCtrl.js"></script>
+  <script src="app/views/navbar/navbarService.js"></script>
+  <script src="app/views/commServices/commServicesCtrl.js"></script>
+  <script src="app/views/commServices/commServicesService.js"></script>
+  <script src="app/views/homeServices/homeServicesCtrl.js"></script>
+  <script src="app/views/homeServices/homeServicesService.js"></script>
 </body>
 
 </html>
