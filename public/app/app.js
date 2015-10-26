@@ -21,17 +21,23 @@ angular.module("macysApp", ["ui.router", "ui.materialize", "angularPayments"])
     controller: 'aboutCtrl'
   })
 
-  .state('homeServices', {
-    url: '/homeservices',
-    templateUrl: 'app/views/homeServices/homeServicesTmpl.html',
-    controller: 'homeServicesCtrl'
+  .state('services', {
+    url: '/services',
+    templateUrl: 'app/views/services/servicesTmpl.html',
+    controller: 'servicesCtrl'
   })
 
-  .state('commServices', {
-    url: '/commservices',
-    templateUrl: 'app/views/commServices/commServicesTmpl.html',
-    controller: 'commServicesCtrl'
-  })
+  // .state('homeServices', {
+  //   url: '/homeservices',
+  //   templateUrl: 'app/views/homeServices/homeServicesTmpl.html',
+  //   controller: 'homeServicesCtrl'
+  // })
+  //
+  // .state('commServices', {
+  //   url: '/commservices',
+  //   templateUrl: 'app/views/commServices/commServicesTmpl.html',
+  //   controller: 'commServicesCtrl'
+  // })
 
   .state('contact', {
     url: '/contact',

@@ -53,45 +53,11 @@ app.delete('/api/orders/:id', OrderController.delete);
 
 //CART
 
-function cart(req, res, next) {
-  if (!req.session.cart) {
-    req.session.cart = [];
-    next();
-  }
-  next();
-}
+app.post('/api/cart', CartController.addProduct);
+app.get('/api/cart', CartController.getCart);
+app.delete('/api/cart/remove/:id', CartController.deleteItem);
+app.put('/api/cart/updateItem', CartController.updateItem);
 
-app.post('/api/cart', cart, CartController.addProduct);
-
-// function(req, res) {
-//
-//   var product = {
-//     product: 'glass cleaner',
-//     quantity: 1,
-//     price: 3
-//   }
-
-app.get('/api/cart', cart, CartController.getCart);
-
-// function(req, res) {
-//   res.send(req.session.cart)
-// });
-// app.get('/cart', CartController.read);
-
-
-
-//
-//   req.session.cart.push(product);
-//   console.log(req.session.cart)
-//   res.end()
-// })
-
-app.delete('/api/cart/remove/:id', cart, CartController.deleteItem);
-app.put('/api/cart/updateItem', cart, CartController.updateItem);
-
-// function(req, res) {
-//   req.session.cart = [];
-// });
 
 
 

@@ -1,4 +1,6 @@
 /* Custom Stylesheet */
+
+
 /**
  * Use this file to override Materialize files so you can update
  * the core Materialize files in the future
@@ -6,45 +8,38 @@
  * Made By MaterializeCSS.com
  */
 
- html, body {
-   height: 100%;
- }
-
+html, body {
+  height: 100%;
+}
 nav ul a {
-    color: #312F2F;
+  color: #312F2F;
 }
 nav .brand-logo {
   color: #312F2F;
   font-family: "Lobster";
 }
-
 nav .material-icons {
-    color: #312F2F;
+  color: #312F2F;
 }
-
 i.medium {
   color: #312F2F;
 }
-
 p {
   line-height: 2rem;
 }
-
 .button-collapse {
   color: #26a69a;
 }
-
 .parallax-container {
   min-height: 380px;
   line-height: 0;
   height: auto;
-  color: rgba(255,255,255,.9);
+  color: rgba(255, 255, 255, .9);
 }
-  .parallax-container .section {
-    width: 100%;
-  }
-
-@media only screen and (max-width : 992px) {
+.parallax-container .section {
+  width: 100%;
+}
+@media only screen and (max-width: 992px) {
   .parallax-container .section {
     position: absolute;
     top: 40%;
@@ -53,13 +48,11 @@ p {
     top: 10%;
   }
 }
-
-@media only screen and (max-width : 600px) {
+@media only screen and (max-width: 600px) {
   #index-banner .section {
     top: 0;
   }
 }
-
 .icon-block {
   padding: 0 15px;
 }
@@ -67,22 +60,18 @@ p {
   font-size: inherit;
   color: #312F2F;
 }
-
 footer.page-footer {
   margin: 0;
   background-color: #312F2F;
   text-align: center;
   color: white;
 }
-
 .row.col.l6 {
   text-align: center;
 }
-
 p {
   color: #312F2F;
 }
-
 .square {
   height: 10px;
   width: 10px;
@@ -97,18 +86,19 @@ a.dropdown-button.btn {
   background-color: #fff;
   box-shadow: none;
 }
-
 a.dropdown-button.btn .dropdown-content active {
   color: #312F2F;
   opacity: 0;
 }
 
-
 /* label focus color */
+
 .input-field input[type=text]:focus + label {
   color: blue;
 }
+
 /* label underline focus color */
+
 .input-field input[type=text]:focus {
   border-bottom: 1px solid blue;
   box-shadow: 0 1px 0 0 blue;
@@ -124,6 +114,7 @@ a.dropdown-button.btn .dropdown-content active {
   width:100%;
 }*/
 
+
 /*.li > img {
   width:60px;
   height:60px;
@@ -134,6 +125,7 @@ a.dropdown-button.btn .dropdown-content active {
 }
 
 
+/*About View*/
 
 #about-view {
   height: 100%;
@@ -143,17 +135,14 @@ a.dropdown-button.btn .dropdown-content active {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-
 .text {
   margin-left: 20px;
 }
-
 #about-view h1 {
+  margin-top: 0px;
   padding: 20px;
   color: #ececec;
 }
-
 #about-view p {
   padding: 20px;
   width: 50%;
@@ -162,16 +151,82 @@ a.dropdown-button.btn .dropdown-content active {
   line-height: 2em;
 }
 
+/*Contact View*/
+
 #contact-view {
   height: 100%;
   width: 100%;
-  background-image: url("../photos/window-photo.jpg");
+  background-image: url("../photos/light-desk-bw.jpg");
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 3%;
+}
+.contactText {
+  text-align: center;
+  color: #ececec;
+  /*margin-top: 100px;*/
+  height: 100%;
 }
 
+.contactText h3 {
+  text-decoration: underline;
+}
+
+.contactText a {
+  color: #ececec;
+}
+
+/*Cart View*/
 
 #cart-view .btn-large {
   float: right;
+}
+
+/*Home Services View*/
+
+#homeServices-view {
+  height: 100%;
+  width: 100%;
+}
+
+.shower-doors {
+  width: 100%;
+  height: 372px;
+}
+
+.showerImage img {
+  width: 500px;
+  height: 372px;
+  margin-top: 0px;
+  float: left;
+  padding-right: 10px;
+}
+
+.shower-doors h1 {
+  text-align: center;
+  position: relative;
+}
+
+.shower-doors h5 {
+  margin: 10px;
+  line-height: inherit;
+}
+
+.home-windows h1 {
+  text-align: center;
+  position: relative;
+}
+
+.home-windows h5 {
+  margin: 10px;
+  line-height: inherit;
+}
+
+.homeWindowImage img {
+  width: 500px;
+  height: 372px;
+  margin-top: 0px;
+  float: left;
+  padding-right: 10px;
 }
