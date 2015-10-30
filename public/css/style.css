@@ -124,7 +124,6 @@ a.dropdown-button.btn .dropdown-content active {
   color: red;
 }
 
-
 /*About View*/
 
 #about-view {
@@ -168,11 +167,9 @@ a.dropdown-button.btn .dropdown-content active {
   /*margin-top: 100px;*/
   height: 100%;
 }
-
 .contactText h3 {
   text-decoration: underline;
 }
-
 .contactText a {
   color: #ececec;
 }
@@ -185,48 +182,108 @@ a.dropdown-button.btn .dropdown-content active {
 
 /*Home Services View*/
 
+#homeServices-view .contactBtn {
+  text-align: center;
+  bottom: 0;
+  margin-top: 75px;
+  color: black;
+}
 #homeServices-view {
   height: 100%;
   width: 100%;
 }
 
+/*Services Responsive CSS*/
+
+@media (max-width: 1040px) {
+  /*Wrapper*/
+  .wrapper {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+    align-items: center;
+  }
+  /*Button*/
+  .waves-effect.waves-light.white.black-text {
+    float: left;
+    width: 50%;
+    margin-bottom: 2%;
+    width: 50%;
+  }
+  img {
+    width: 500px;
+    height: 372px;
+    margin-top: 0px;
+    float: left;
+    padding-right: 10px;
+    text-align: center;
+  }
+  h1 {
+    float: left;
+    font-size: 4rem;
+    width: 50%;
+  }
+  h5 {
+    float: left;
+    width: 50%;
+  }
+}
+
+/*Services Non-Responsive CSS*/
+
 .shower-doors {
   width: 100%;
   height: 372px;
 }
-
-.showerImage img {
+.mirrors {
+  width: 100%;
+  height: 372px;
+}
+.home-windows {
+  width: 100%;
+  height: 372px;
+}
+.insulated {
+  width: 100%;
+  height: 372px;
+}
+.fireplace {
+  width: 100%;
+  height: 372px;
+}
+img {
   width: 500px;
   height: 372px;
   margin-top: 0px;
   float: left;
   padding-right: 10px;
 }
-
-.shower-doors h1 {
+h1 {
   text-align: center;
   position: relative;
 }
-
-.shower-doors h5 {
+h5 {
   margin: 10px;
   line-height: inherit;
-}
-
-.home-windows h1 {
   text-align: center;
-  position: relative;
 }
 
-.home-windows h5 {
-  margin: 10px;
-  line-height: inherit;
+/*Footer*/
+
+
+/*#homeServices-view footer.page-footer {
+  margin-top: 10px;
+  background-color: #312F2F;
+  text-align: center;
+  color: white;
+  position: fixed;
 }
 
-.homeWindowImage img {
-  width: 500px;
-  height: 372px;
-  margin-top: 0px;
-  float: left;
-  padding-right: 10px;
+#homeServices-view .container ul {
+  margin-bottom: 0;
 }
+
+#homeServices-view .address {
+  padding-bottom: 10px;
+}*/
