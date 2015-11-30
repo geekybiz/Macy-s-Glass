@@ -166,6 +166,7 @@ a.dropdown-button.btn .dropdown-content active {
   color: #ececec;
   /*margin-top: 100px;*/
   height: 100%;
+  width: 100%;
 }
 .contactText h3 {
   text-decoration: underline;
@@ -199,19 +200,21 @@ a.dropdown-button.btn .dropdown-content active {
   /*Wrapper*/
   .wrapper {
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    align-items: center;
+    margin: auto;
+    width: 50%;
+    /*width: 100%;*/
+    align-item: center;
+    text-align: center;
   }
   /*Button*/
   .waves-effect.waves-light.white.black-text {
     float: left;
-    width: 50%;
+    /*width: 50%;*/
     margin-bottom: 2%;
-    width: 50%;
+    width: 490px;
+
   }
-  img {
+  .serviceImg {
     width: 500px;
     height: 372px;
     margin-top: 0px;
@@ -219,47 +222,40 @@ a.dropdown-button.btn .dropdown-content active {
     padding-right: 10px;
     text-align: center;
   }
-  h1 {
+  h3 {
     float: left;
-    font-size: 4rem;
-    width: 50%;
+    /*font-size: 4rem;*/
+    /*width: 50%;*/
+    margin: auto;
+    text-align: center;
+    width: 500px;
   }
+
   h5 {
     float: left;
-    width: 50%;
+    width: 475px;
+    text-align: center;
+  }
+  div {
+    position: relative;
   }
 }
 
 /*Services Non-Responsive CSS*/
 
-.shower-doors {
-  width: 100%;
+.service {
   height: 372px;
 }
-.mirrors {
-  width: 100%;
-  height: 372px;
-}
-.home-windows {
-  width: 100%;
-  height: 372px;
-}
-.insulated {
-  width: 100%;
-  height: 372px;
-}
-.fireplace {
-  width: 100%;
-  height: 372px;
-}
-img {
+
+.serviceImg {
   width: 500px;
   height: 372px;
   margin-top: 0px;
   float: left;
   padding-right: 10px;
+  padding-left: 10px;
 }
-h1 {
+h3 {
   text-align: center;
   position: relative;
 }
